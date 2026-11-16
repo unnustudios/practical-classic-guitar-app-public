@@ -1,0 +1,80 @@
+/* One small stylesheet with no build step, no framework and no fonts to fetch: these pages
+   exist to be read and to load from anywhere, including a reviewer's browser on a bad
+   connection. Colours are the app's own (Studio), in light and in dark. */
+
+:root {
+  --bg: #f1efea;
+  --surface: #ffffff;
+  --text: #1b1b19;
+  --muted: #62605a;
+  --accent: #2c5a4c;
+  --border: #dedbd3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141413;
+    --surface: #1e1e1c;
+    --text: #edebe6;
+    --muted: #a5a29a;
+    --accent: #7fb8a4;
+    --border: #33322f;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+h1 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 2.4rem 0 0.6rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.6rem 0 0.4rem;
+}
+
+p, li { color: var(--muted); }
+li { margin-bottom: 0.4rem; }
+ul { padding-left: 1.2rem; }
+
+strong { color: var(--text); font-weight: 600; }
+
+a { color: var(--accent); text-decoration: underline; text-underline-offset: 0.15em; }
+
+.lead { font-size: 1.05rem; margin-bottom: 0.5rem; }
+.meta { font-size: 0.85rem; margin-top: 0; }
+.back { margin: 0 0 1.6rem; font-size: 0.9rem; }
+.lang { margin: 0 0 1rem; font-size: 0.9rem; text-align: right; }
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--border);
+}
+footer p { font-size: 0.85rem; margin: 0; }
