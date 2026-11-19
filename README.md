@@ -1,7 +1,7 @@
 # practical-classic-guitar-app-public
 
 The public pages for **Practical Classic Guitar**, a daily practice companion for classical
-guitar on iPad: the marketing page, the support page and the privacy policy that the App Store
+guitar on iPad and iPhone: the marketing page, the support page and the privacy policy that the App Store
 listing links to, in English and in Portuguese.
 
 | Page | English | Português |
