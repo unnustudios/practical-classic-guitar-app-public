@@ -38,6 +38,11 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
+      # The deploy step asked for the artifact under half a second after it was uploaded, and
+      # twice in a row GitHub answered "No artifacts named github-pages". A second run passed
+      # both times, so it only needs a moment.
+      - name: Wait for the artifact to be listed
+        run: sleep 15
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
